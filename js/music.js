@@ -1,13 +1,16 @@
 /**
  * 
  */
+
 //どのボタンが押されたのかを確認
-const gogo = document.getElementById('gogo');
-const rezero = document.getElementById('rezero');
+const btngogo = document.getElementById('gogo');
+const btnrezero = document.getElementById('rezero');
+//const btnimpact = document.getElementById('impact');
 
 //イベントリスナー
-gogo.addEventListener('click',gogo);
-rezero.addEventListener('click',rezero);
+btngogo.addEventListener('click',gogo);
+btnrezero.addEventListener('click',rezero);
+//btnimpact.addEventListener('click',impact);
 
 function gogo(){
 	const audio = new Audio('music/gogo.mp3');
@@ -18,3 +21,5 @@ function rezero(){
 	const audio = new Audio('music/rezero.mp3');
 	audio.play();
 }
+
+//function impact(){}
