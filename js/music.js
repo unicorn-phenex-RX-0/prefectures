@@ -36,3 +36,4 @@ function fever3000(){
 	const audio = new Audio('music/3000fever.mp3');
 	audio.play();
 }
+
