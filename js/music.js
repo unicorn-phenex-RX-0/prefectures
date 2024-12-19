@@ -20,12 +20,15 @@ function gogo(){
 }
 
 function rezero(){
-	const audio = new Audio('music/rezero.mp3');
+	const music = ['music/rezero.mp3','music/rezeroRainbow.mp3'];
+	const audio = new Audio();
+	let random = Math.floor(Math.random() * music.length);
+	audio.src = music[random];
 	audio.play();
 }
 
 function impact(){
-	const audio = new Audio('music/impact.mp3');
+	const audio = new Audio("music/impact.mp3");
 	audio.play();
 }
 
