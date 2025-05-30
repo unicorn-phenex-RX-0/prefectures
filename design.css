@@ -3,3 +3,9 @@
 .center {
 	text-align: center;
 }
+
+#btnGroup{
+	display: block;
+	margin: 0 auto;
+	justify-content: space-between;
+}
