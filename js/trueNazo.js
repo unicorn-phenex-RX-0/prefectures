@@ -11,12 +11,12 @@ $(document).ready(function() {
 		{
 			id: 'puzzle1_moon_riddle',
 			type: 'two_stage_riddle',
-			question: "私は毎日姿を変え、満ちては欠け、また満ちる。しかし、あなたに付いていく。私は何でしょう？",
-			fakeAnswer: "月", // フェイクの正解
-			trueAnswer: "口", // 真の正解
-			fakeHint: "その答えは最も自然ですね。しかし、よく考えてみてください。私は姿を変えるだけでなく、別のメッセージも隠しています。もう一度、私をよく見てください。特に、私の言葉の中にある『特定の文字』に注目すると、真実が見えてくるでしょう。",
+			question: "私は何でしょう？",
+			fakeAnswer: "ファミリーマート", // フェイクの正解
+			trueAnswer: "シエラレオネ", // 真の正解
+			fakeHint: "解き方は合っています。しかし、私は過去の中に、、、。",
 			// ここでHTMLの改行タグを使って表示を調整
-			hiddenMessage: "「私は何を隠しているだろうか？」",
+			hiddenMessage: "あなたの職場",
 			setup: function() {
 				$gameContainer.html(`
                     <h2>${this.question}</h2>
@@ -33,7 +33,7 @@ $(document).ready(function() {
 			checkAnswer: function(input) {
 				const normalizedInput = input.trim().toLowerCase();
 
-				if (normalizedInput === this.fakeAnswer.toLowerCase() || normalizedInput === 'つき') { // '月'と'つき'の両方をフェイクの正解とする
+				if (normalizedInput === this.fakeAnswer.toLowerCase() || normalizedInput === 'ファミマ') { // '月'と'つき'の両方をフェイクの正解とする
 					$feedbackMessage.remove();
 					$hintMessage.text(this.fakeHint);
 					$hintMessage.css('color', '#e67e22'); // オレンジ系の警告色
@@ -113,14 +113,10 @@ $(document).ready(function() {
 			$answerInput.focus();
 		} else {
 			$gameContainer.html(`
-                <h2>すべての謎を解き明かしました！</h2>
-                <p>しかし、物語には常に『次なる一節』が存在します。
-				もし、あなたが『見えない道』の存在を信じるなら
-				言葉が眠るその下に手を伸ばしてみてください。
-				新たな始まりは、いつもひっそりと待っています。</p>
-				<br>
-				<button onclick="location.href='trueNazo.html'" style="background: white;">ここからが本当の謎</butoon>
-				`);
+                <h2>真の謎も含めてすべての謎を解き明かしました！</h2>
+				<div id"time"></div>
+				<h3>おめでとう！！</h3>
+                <p>製作者に65536と伝えてね</p>`);
 		}
 	}
 	// <img src="https://via.placeholder.com/300x200?text=Congratulations!" alt="クリアおめでとう" style="max-width: 100%;">
