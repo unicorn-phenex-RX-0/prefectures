@@ -11,7 +11,7 @@ $(document).ready(function() {
 		{
 			id: 'puzzle1_moon_riddle',
 			type: 'two_stage_riddle',
-			question: "これは何でしょう？",
+			question: "ある人からすると近くにあり、ある人からすると遠くにある。これはどこでしょう？",
 			fakeAnswer: "ファミリーマート", // フェイクの正解
 			trueAnswer: "シエラレオネ", // 真の正解
 			fakeHint: "解き方は合っています。しかし、私の過去の中に、、、。",
