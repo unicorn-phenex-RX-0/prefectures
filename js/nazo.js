@@ -101,6 +101,15 @@ $(document).ready(function() {
 				}
 			});
 
+			// Enterキーのイベントハンドリングを追加
+			$answerInput.off('keypress').on('keypress', function(e) {
+				// Enterキーが押されたか (キーコード13) を確認
+				if (e.which === 13) {
+					e.preventDefault(); // デフォルトのEnterキーの挙動（フォーム送信など）をキャンセル
+					$submitButton.click(); // 回答ボタンのクリックイベントをプログラムで発生させる
+				}
+			});
+
 			$answerInput.focus();
 		} else {
 			$gameContainer.html(`
@@ -110,7 +119,7 @@ $(document).ready(function() {
 				`);
 		}
 	}
-// <img src="https://via.placeholder.com/300x200?text=Congratulations!" alt="クリアおめでとう" style="max-width: 100%;">
-	
+	// <img src="https://via.placeholder.com/300x200?text=Congratulations!" alt="クリアおめでとう" style="max-width: 100%;">
+
 	displayCurrentPuzzle();
 });
