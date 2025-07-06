@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1; /* フッターを下に固定するために、中央コンテンツが余白を占めるようにする */
+    justify-content: center; /* 水平方向の中央寄せ */
+    align-items: center; /* 垂直方向の中央寄せ */
+    padding: 20px;
+}
+
+#game-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto; /* 親要素の幅いっぱいに広がるようにする */
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px; /* 問題文と入力フィールドの間隔 */
+}
+
+/* 入力フィールドのスタイル */
+#answer-input {
+    padding: 10px;
+    margin-bottom: 15px; /* ボタンとの間のスペース */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%; /* 親要素の80%の幅 */
+    max-width: 400px; /* 入力フィールドの最大幅 */
+    display: block; /* ブロック要素にして縦並びにする */
+    margin-left: auto; /* 中央寄せ */
+    margin-right: auto; /* 中央寄せ */
+    box-sizing: border-box; /* パディングを幅に含める */
+}
+
+/* 回答ボタンのスタイル */
+button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    display: block; /* ブロック要素にして縦並びにする */
+    margin-left: auto; /* 中央寄せ */
+    margin-right: auto; /* 中央寄せ */
+}
+
+button:hover {
+    background-color: #005f6b;
+}
+
+/* フィードバックメッセージのスタイル */
+#feedback-message {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em; /* メッセージがないときも高さを確保してレイアウトのずれを防ぐ */
+}
+
+/* 隠されたヒントのスタイル（フェイク正解後に表示） */
+.hidden-hint {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #e74c3c; /* 赤い点線ボーダー */
+    background-color: #fceceb; /* 薄い赤系の背景 */
+    color: #c0392b; /* 濃い赤系のテキスト */
+    font-size: 1.1em;
+    font-weight: bold;
+    display: none; /* 最初は非表示 */
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* コンテンツが少ない場合でもフッターを一番下に配置する */
+}
