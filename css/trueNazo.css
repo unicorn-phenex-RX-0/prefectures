@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #00A041;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -90,7 +90,7 @@ button:hover {
 
 /* フッターのスタイル */
 footer {
-    background-color: #333;
+    background-color: #008cd6;
     color: white;
     text-align: center;
     padding: 1rem;
