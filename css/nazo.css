@@ -48,6 +48,7 @@ h2 {
     margin-left: auto; /* 中央寄せ */
     margin-right: auto; /* 中央寄せ */
     box-sizing: border-box; /* パディングを幅に含める */
+    font-size: 16px; /* ズーム対策*/
 }
 
 /* 回答ボタンのスタイル */
