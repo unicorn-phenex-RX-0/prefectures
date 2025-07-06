@@ -14,7 +14,7 @@ $(document).ready(function() {
 			question: "私は何でしょう？",
 			fakeAnswer: "ファミリーマート", // フェイクの正解
 			trueAnswer: "シエラレオネ", // 真の正解
-			fakeHint: "解き方は合っています。しかし、私は過去の中に、、、。",
+			fakeHint: "解き方は合っています。しかし、過去の中に、、、。",
 			// ここでHTMLの改行タグを使って表示を調整
 			hiddenMessage: "あなたの職場",
 			setup: function() {
